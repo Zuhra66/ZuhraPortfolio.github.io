@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Zuhra Totakhail Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
+
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Zuhra Totakhail<br />
+					Portfolio</h1>
+				<p>I’m a developer, digital artist, coder, and a bunch of other impressive titles and buzzwords.</p>
+			</div>
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Zuhra's Blogs</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="info.html">INFO</a></li>
+					<li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="blog.html">BLOGS</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/zuhra-totakhail/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Zuhra66?tab=repositories" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+<div id="main">
+    <section class="blogs">
+        <h1>BLOGS</h1>
+        <p>Here are my latest blog posts:</p>
+        <ul id="blog-list"></ul>
+    </section>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
+    <ul><li>&copy; Totakhail</li></ul>
+</div>
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				const blogFeedUrl = "https://zuhratotakhail.blogspot.com/feeds/posts/default?alt=rss";
+				const blogList = document.getElementById("blog-list");
+
+				fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(blogFeedUrl)}`)
+					.then(response => response.json())
+					.then(data => {
+						if (data.status === "ok") {
+							data.items.slice(0, 5).forEach(item => {
+								const listItem = document.createElement("li");
+								listItem.innerHTML = `
+									<h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+									<p>${item.description.slice(0, 100)}...</p>
+								`;
+								blogList.appendChild(listItem);
+							});
+						} else {
+							blogList.innerHTML = "<li>Unable to load blog posts at this time.</li>";
+						}
+					})
+					.catch(error => {
+						console.error("Error fetching RSS feed:", error);
+						blogList.innerHTML = "<li>Unable to load blog posts at this time.</li>";
+					});
+			</script>
+		</body>
+</html>
