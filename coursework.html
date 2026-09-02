@@ -12,8 +12,38 @@
 
    <link rel="stylesheet" href="assets/css/main.css">
 
-    <style>
-        /* Page-specific structure; visual course-card styling lives in main.css. */
+   
+       <style>
+    /* Page-specific structure; visual course-card styling lives in main.css. */
+
+    /* Keep navigation aligned to the right like the other portfolio pages */
+    .site-header .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .site-header .brand {
+        flex-shrink: 0;
+    }
+
+    .site-header .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 28px;
+        margin-left: auto;
+    }
+
+    .site-header .nav-links a {
+        white-space: nowrap;
+    }
+
+    .coursework-page {
+        min-height: 100vh;
+        padding: 150px 0 90px;
+    }
 
         .coursework-page {
             min-height: 100vh;

@@ -268,4 +268,29 @@
         padding: 8px 13px;
         font-size: 0.8rem;
     }
+    /* Coursework page - keep navigation aligned right */
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.site-header nav {
+    margin-left: auto;
+}
+
+.site-header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header nav li {
+    margin: 0;
+}
 }
