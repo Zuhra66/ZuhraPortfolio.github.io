@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zuhra Totakhail — Academic Coursework and Projects">
+    <title>Academic Coursework | Zuhra Totakhail</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        /* Page-specific structure; visual course-card styling lives in main.css. */
+
+        .coursework-page {
+            min-height: 100vh;
+            padding: 150px 0 90px;
+        }
+
+        .coursework-hero {
+            width: min(var(--max, 1200px), calc(100% - 48px));
+            margin: 0 auto 70px;
+        }
+
+        .coursework-kicker {
+            display: inline-block;
+            color: var(--cyan, #62e6e8);
+            font: 500 11px "DM Mono", monospace;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .coursework-hero h1 {
+            margin: 0 0 20px;
+            font-size: clamp(48px, 8vw, 92px);
+            line-height: .95;
+            letter-spacing: -.07em;
+        }
+
+        .coursework-hero h1 span {
+            opacity: .42;
+        }
+
+        .coursework-hero p {
+            max-width: 720px;
+            margin: 0;
+            color: var(--muted, #8e9aaa);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .degree-block {
+            width: min(var(--max, 1200px), calc(100% - 48px));
+            margin: 0 auto 70px;
+        }
+
+        .degree-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 25px;
+            padding-bottom: 18px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--line, rgba(255,255,255,.1));
+        }
+
+        .degree-label {
+            color: var(--cyan, #62e6e8);
+            font: 500 10px "DM Mono", monospace;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .degree-header h2 {
+            margin: 8px 0 0;
+            font-size: clamp(28px, 4vw, 44px);
+            letter-spacing: -.05em;
+        }
+
+        .degree-header p {
+            margin: 0;
+            max-width: 430px;
+            color: var(--muted, #8e9aaa);
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: right;
+        }
+
+        .coursework-footer {
+            width: min(var(--max, 1200px), calc(100% - 48px));
+            margin: 80px auto 0;
+            padding: 24px 0 0;
+            border-top: 1px solid var(--line, rgba(255,255,255,.1));
+            color: var(--muted, #8e9aaa);
+            font: 400 11px "DM Mono", monospace;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            .coursework-page {
+                padding-top: 120px;
+            }
+
+            .coursework-hero,
+            .degree-block,
+            .coursework-footer {
+                width: min(100% - 32px, var(--max, 1200px));
+            }
+
+            .degree-header {
+                display: block;
+            }
+
+            .degree-header p {
+                margin-top: 12px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Simple page header -->
+    <header class="site-header" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="brand" aria-label="Back to home">
+                <span class="brand-mark">ZT</span>
+                <span class="brand-name">Zuhra Totakhail</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="coursework.html" class="active">Coursework</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="coursework-page">
+
+        <section class="coursework-hero">
+            <span class="coursework-kicker">Academic Portfolio / 01</span>
+            <h1>Academic <span>Coursework</span></h1>
+            <p>
+                A collection of coursework, technical foundations, and academic
+                projects from my Computer Science studies at California State
+                University, Monterey Bay.
+            </p>
+        </section>
+
+        <!-- =====================================================
+             CSUMB
+        ====================================================== -->
+        <section class="degree-block" id="csumb">
+            <div class="degree-header">
+                <div>
+                    <span class="degree-label">B.S. Computer Science</span>
+                    <h2>California State University, Monterey Bay</h2>
+                </div>
+                <p>
+                    Coursework spanning software engineering, full-stack
+                    development, data science, databases, systems, networking,
+                    algorithms, logic, and technology.
+                </p>
+            </div>
+
+            <div class="course-filters" role="group" aria-label="Filter CSUMB courses">
+                <button class="course-filter active" data-filter="all">All Courses</button>
+                <button class="course-filter" data-filter="software">Software</button>
+                <button class="course-filter" data-filter="data">Data &amp; AI</button>
+                <button class="course-filter" data-filter="systems">Systems</button>
+                <button class="course-filter" data-filter="foundations">Foundations</button>
+            </div>
+
+            <div class="course-grid">
+
+                <article class="course-card featured-course" data-category="software">
+                    <div class="course-number">CST 499</div>
+                    <div class="course-icon">🚀</div>
+                    <h3>Directed Group Capstone</h3>
+                    <p>
+                        A hands-on software engineering course focused on developing
+                        and delivering a substantial real-world software project.
+                        Worked collaboratively through requirements, design,
+                        implementation, testing, and delivery.
+                    </p>
+                    <div class="course-tags">
+                        <span>React</span><span>Node.js</span><span>PostgreSQL</span>
+                        <span>JWT</span><span>Git</span>
+                    </div>
+                    <div class="course-project">
+                        <strong>Featured Project</strong>
+                        <span>EmpowerMedWellness</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=j4DXLJo2BFM"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card featured-course" data-category="software">
+                    <div class="course-number">CST 489</div>
+                    <div class="course-icon">📋</div>
+                    <h3>Capstone Project Planning</h3>
+                    <p>
+                        Focused on planning a full-scale software engineering
+                        capstone project using industry practices. Developed
+                        project specifications, requirements, milestones,
+                        documentation, and team collaboration strategies.
+                    </p>
+                    <div class="course-tags">
+                        <span>Project Planning</span><span>Requirements</span>
+                        <span>Documentation</span><span>Teamwork</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=kxc6tLD6Gk8"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="software">
+                    <div class="course-number">CST 438</div>
+                    <div class="course-icon">⚙️</div>
+                    <h3>Software Engineering</h3>
+                    <p>
+                        Explored the complete software development lifecycle,
+                        including requirements analysis, system design,
+                        implementation, testing, deployment, and collaborative
+                        development practices.
+                    </p>
+                    <div class="course-tags">
+                        <span>Software Engineering</span><span>SDLC</span>
+                        <span>Testing</span><span>Git</span><span>Agile</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=vaQ0-StSIhk"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="software">
+                    <div class="course-number">CST 336</div>
+                    <div class="course-icon">🌐</div>
+                    <h3>Internet Programming</h3>
+                    <p>
+                        Developed modern web applications while exploring server-side
+                        programming, client-side scripting, database integration,
+                        RESTful web services, Internet architecture, and responsive design.
+                    </p>
+                    <div class="course-tags">
+                        <span>JavaScript</span><span>Web Development</span>
+                        <span>REST APIs</span><span>Databases</span><span>Responsive Design</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=d7OgYkrzr58"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="software">
+                    <div class="course-number">CST 338</div>
+                    <div class="course-icon">💻</div>
+                    <h3>Software Design</h3>
+                    <p>
+                        Studied software design principles using Java, including
+                        object-oriented design, requirements analysis, system
+                        modeling, design patterns, and software architecture.
+                    </p>
+                    <div class="course-tags">
+                        <span>Java</span><span>OOP</span>
+                        <span>Design Patterns</span><span>Architecture</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=_o4DtM1yR-Q"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="data">
+                    <div class="course-number">CST 363</div>
+                    <div class="course-icon">🗄️</div>
+                    <h3>Introduction to Databases</h3>
+                    <p>
+                        Studied relational database systems and SQL with a focus
+                        on querying, data management, database design, and how
+                        structured data supports modern applications.
+                    </p>
+                    <div class="course-tags">
+                        <span>SQL</span><span>Relational Databases</span>
+                        <span>Data Modeling</span><span>Data Management</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=WhIMAV5dRlU"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="data">
+                    <div class="course-number">CST 383</div>
+                    <div class="course-icon">📊</div>
+                    <h3>Introduction to Data Science</h3>
+                    <p>
+                        Built a foundation in data science through data analysis,
+                        manipulation, visualization, statistical programming,
+                        and introductory machine learning concepts.
+                    </p>
+                    <div class="course-tags">
+                        <span>Python</span><span>SQL</span><span>Data Analysis</span>
+                        <span>Visualization</span><span>Machine Learning</span>
+                    </div>
+                </article>
+
+                <article class="course-card" data-category="foundations">
+                    <div class="course-number">CST 370</div>
+                    <div class="course-icon">🧠</div>
+                    <h3>Algorithms</h3>
+                    <p>
+                        Studied algorithm design, efficiency, complexity analysis,
+                        and problem-solving strategies including brute force,
+                        divide-and-conquer, and decrease-and-conquer.
+                    </p>
+                    <div class="course-tags">
+                        <span>Algorithms</span><span>Data Structures</span>
+                        <span>Graphs</span><span>Trees</span><span>Hash Tables</span>
+                    </div>
+                </article>
+
+                <article class="course-card" data-category="systems">
+                    <div class="course-number">CST 334</div>
+                    <div class="course-icon">🐧</div>
+                    <h3>Operating Systems</h3>
+                    <p>
+                        Explored operating system concepts through Linux,
+                        command-line tools, file systems, shell scripting,
+                        GNU utilities, and system-level programming.
+                    </p>
+                    <div class="course-tags">
+                        <span>Linux</span><span>Shell Scripting</span>
+                        <span>GNU Utilities</span><span>File Systems</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=y3gI3IlcJ6s"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="systems">
+                    <div class="course-number">CST 311</div>
+                    <div class="course-icon">🔗</div>
+                    <h3>Introduction to Computer Networking</h3>
+                    <p>
+                        Studied computer networks and internetworking protocols,
+                        including TCP/IP, network security, LANs, WANs, Internet
+                        architecture, and network performance.
+                    </p>
+                    <div class="course-tags">
+                        <span>TCP/IP</span><span>Networking</span>
+                        <span>Network Security</span><span>LAN/WAN</span><span>Cisco</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=3hspqICwqiw"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="foundations">
+                    <div class="course-number">CST 329</div>
+                    <div class="course-icon">🔢</div>
+                    <h3>Reasoning with Logic</h3>
+                    <p>
+                        Studied formal logic as a foundation for computer science,
+                        including propositional and first-order logic, truth tables,
+                        logical notation, argument analysis, and formal proof techniques.
+                    </p>
+                    <div class="course-tags">
+                        <span>Propositional Logic</span><span>First-Order Logic</span>
+                        <span>Truth Tables</span><span>Proofs</span>
+                    </div>
+                </article>
+
+                <article class="course-card" data-category="software">
+                    <div class="course-number">CST 328</div>
+                    <div class="course-icon">🎨</div>
+                    <h3>Digital Art and Design</h3>
+                    <p>
+                        Explored graphics programming and interactive digital
+                        applications through GPU programming, physics-based
+                        calculations, animation, and game development concepts.
+                    </p>
+                    <div class="course-tags">
+                        <span>Computer Graphics</span><span>GPU Programming</span>
+                        <span>Animation</span><span>Game Development</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=J4Tak6vzpLI"
+                       class="course-link" target="_blank" rel="noopener noreferrer">
+                        Watch Project <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="course-card" data-category="foundations">
+                    <div class="course-number">CST 300</div>
+                    <div class="course-icon">🎓</div>
+                    <h3>Major Pro Seminar</h3>
+                    <p>
+                        Developed professional and academic skills through technical
+                        writing, research, presentations, critical thinking, goal
+                        setting, and analysis of technology trends.
+                    </p>
+                    <div class="course-tags">
+                        <span>Research</span><span>Technical Writing</span>
+                        <span>Presentations</span><span>Critical Thinking</span>
+                    </div>
+                    <div class="course-project">
+                        <strong>2 Projects</strong>
+                        <span>Major Pro Seminar</span>
+                    </div>
+                    <div class="course-links">
+                        <a href="https://www.youtube.com/watch?v=WwB_-69cZqA"
+                           target="_blank" rel="noopener noreferrer">Project 1 ↗</a>
+                        <a href="https://www.youtube.com/watch?v=_IY3-O1RgHY&t=6s"
+                           target="_blank" rel="noopener noreferrer">Project 2 ↗</a>
+                    </div>
+                </article>
+
+                <article class="course-card" data-category="foundations">
+                    <div class="course-number">CST 462S</div>
+                    <div class="course-icon">🌎</div>
+                    <h3>Race, Gender, Class in the Digital World</h3>
+                    <p>
+                        Examined how culture, socioeconomic background, and identity
+                        can influence access to technology and digital learning while
+                        exploring technology's impact on society, equality, inclusion,
+                        and social responsibility.
+                    </p>
+                    <div class="course-tags">
+                        <span>Digital Inclusion</span><span>Technology &amp; Society</span>
+                        <span>Digital Equity</span><span>Social Responsibility</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Eastern University will be added here after the course names are provided. -->
+
+        <footer class="coursework-footer">
+            Eastern University — Applied AI coursework will be added to this page next.
+        </footer>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Coursework page filter — scoped so it does not interfere with
+        // other pages or existing portfolio JavaScript.
+        document.addEventListener("DOMContentLoaded", () => {
+            const filters = document.querySelectorAll(".course-filter");
+            const cards = document.querySelectorAll(".course-card");
+
+            filters.forEach(button => {
+                button.addEventListener("click", () => {
+                    const filter = button.dataset.filter;
+
+                    filters.forEach(item => item.classList.remove("active"));
+                    button.classList.add("active");
+
+                    cards.forEach(card => {
+                        const category = card.dataset.category;
+                        card.classList.toggle(
+                            "hidden",
+                            filter !== "all" && category !== filter
+                        );
+                    });
+                });
+            });
+
+            // Mobile navigation for this standalone page.
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener("click", () => {
+                    const open = menuToggle.getAttribute("aria-expanded") === "true";
+                    menuToggle.setAttribute("aria-expanded", String(!open));
+                    navLinks.classList.toggle("open", !open);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
